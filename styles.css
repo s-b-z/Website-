@@ -1,0 +1,362 @@
+/* BASE */
+body {
+  font-family: "Monoton", cursive;
+  overflow-x: hidden;
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(
+    50deg,
+    black,
+    purple,
+    #f75cff,
+    pink,
+    #f75cff,
+    purple,
+    black
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* NAV */
+#navbar {
+  font-size: 28px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 18px;
+  font-weight: bold;
+  z-index: 1000;
+  padding: 12px 16px;
+  backdrop-filter: blur(6px);
+}
+
+.nav-link {
+  color: #b55aa0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: yellow;
+}
+
+/* HERO */
+#welcome-section {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding-top: 90px; /* space for navbar */
+}
+
+#galaxy-img {
+  position: absolute;
+  inset: 0;
+  width: 120%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  transform: translateX(-8%);
+  z-index: -2;
+}
+
+.hero-content {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TITLE + MARQUEE 1 (tethered) */
+.title-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+#name {
+  color: #400040;
+  font-weight: bold;
+  font-size: clamp(4rem, 14vw, 11rem);
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4em;
+  white-space: nowrap;
+}
+
+#name:hover {
+  color: yellow;
+  transition: color 1.5s cubic-bezier(0, 0, 0.58, 1);
+}
+
+/* BIO under title slightly right */
+#bio {
+  margin: 10px 0 0;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: #400040;
+  font-weight: bold;
+  font-style: italic;
+  transform: translateX(18px);
+}
+
+/* MARQUEE BADGE (shared) */
+.marquee-badge {
+  position: relative;
+  width: 210px;
+  height: 90px;
+  display: grid;
+  place-items: center;
+  transform: translateY(-200px);
+  z-index: 1;
+  
+}
+
+.space-marquee-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* "hanging on a line" tether */
+.marquee-badge::before {
+  display: none;
+  content: "";
+  position: absolute;
+  left: -48px;
+  top: 55%;
+  width: 48px;
+  height: 3px;
+  background: rgba(64, 0, 64, 0.75);
+  border-radius: 999px;
+  transform: translateY(-50%);
+}
+
+/* text centered inside the marquee */
+.marquee-text {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 0 10px;
+  z-index: 2;
+}
+
+
+.marquee-1 .marquee-text {
+  transform: translateY(135px);
+}
+
+
+.marquee-2 .marquee-text {
+  transform: translateY(80px);
+}
+
+.marquee-2{
+transform: translateY(-110px);
+}
+
+
+
+/* RESUME (ON PAGE) */
+.resume-section {
+  padding: 80px 0 60px;
+  text-align: center;
+}
+
+.section-title {
+  margin: 0 0 20px;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: #400040;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.resume-frame {
+  width: 100%;
+  max-width: 850px;
+  margin: 28px auto 0;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 3px solid rgba(64, 0, 64, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.resume-frame iframe {
+  width: 100%;
+  height: 1100px;
+  border: none;
+}
+
+/* LINKS SECTION */
+.links-section {
+  padding: 70px 0 40px;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.social-card {
+  display: inline-block;
+  min-width: 220px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #400040;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: bold;
+  border: 2px solid rgba(64, 0, 64, 0.35);
+  transition: transform 0.2s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.social-card:hover {
+  color: yellow;
+  border-color: yellow;
+  transform: translateY(-2px);
+}
+
+.project-tile:hover {
+  color: yellow;
+  transition: color 1.5s cubic-bezier(0, 0, 0.58, 1);
+}
+
+/* CONTACT (centered + marquee to right + button under) */
+.contact-section {
+  padding: 70px 0 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.contact-title {
+  margin: 0;
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  color: #400040;
+  font-weight: bold;
+}
+
+.email-button {
+  margin-top: 18px;
+  padding: 12px 22px;
+  background-color: #400040;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.email-button:hover {
+  background-color: yellow;
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* SPACEMAN ANIMATION */
+.spaceman {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  animation: spin 20s linear infinite, float 30s ease-in-out infinite;
+  z-index: -1;
+  width: 220px;
+  max-width: 35vw;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0% { top: 10px; left: 10px; }
+  25% { top: 80%; left: 20%; }
+  50% { top: 40%; left: 70%; }
+  75% { top: 90%; left: 60%; }
+  100% { top: 10px; left: 10px; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .resume-frame iframe {
+    height: 900px;
+  }
+}
+
+@media (max-width: 520px) {
+  #navbar {
+    font-size: 20px;
+    gap: 12px;
+  }
+
+  .marquee-badge {
+    transform: translateY(-10px);
+    width: 190px;
+    height: 82px;
+  }
+
+  .marquee-badge::before {
+    left: -34px;
+    width: 34px;
+  }
+
+  #bio {
+    transform: translateX(10px);
+  }
+
+  .resume-frame iframe {
+    height: 700px;
+  }
+
+  .title-row {
+    flex-wrap: wrap;
+  }
+
+  .marquee-badge::before{
+    display: none;
+  }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SBZ Portfolio</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- NAV -->
+      <nav id="navbar">
+        <a class="nav-link" href="#welcome-section">Me!</a>
+        <a class="nav-link" href="#resume">Resume</a>
+        <a class="nav-link" href="#projects">My Work</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+
+      <!-- HERO -->
+      <section id="welcome-section">
+        <img
+          src="https://png.pngtree.com/png-vector/20240128/ourmid/pngtree-pink-planet-illustration-png-image_11558806.png"
+          alt="galaxy"
+          id="galaxy-img"
+        />
+
+        <div class="hero-content">
+          <!-- TITLE + MARQUEE 1 tethered to title -->
+           <div class="hero-center">
+          <div class="title-row">
+            <h1 id="name">
+              <span class="I">I'm</span>
+              <span class="SBZ">SBZ</span>
+            </h1>
+
+            <div class="marquee-badge marquee-1">
+              <img
+                src="https://i.imgur.com/cqG8HUO.png"
+                alt="space marquee"
+                class="space-marquee-img"
+              />
+              <p class="marquee-text">She really is</p>
+            </div>
+          </div>
+
+          <!-- BIO under title slightly right -->
+          <h2 id="bio">A Web Developer</h2>
+        </div>
+      </div>
+      </section>
+
+      <!-- RESUME (ON PAGE, NOT A BUTTON) -->
+      <section id="resume" class="resume-section">
+        <h2 class="section-title">My Resume</h2>
+
+        <!-- Put resume.pdf in the same folder as index.html -->
+        <div class="resume-frame">
+          <iframe
+            src="SaraElizabethBaird-Resume.pdf"
+            title="SBZ's Resume"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- LINKS / PROJECTS SECTION (replaces "Here are some of my projects") -->
+      <section id="projects" class="links-section">
+        <h2 class="section-title">Links</h2>
+
+        <div class="social-links">
+          <a
+            class="social-card"
+            id="profile-link"
+            href="https://github.com/s-b-z"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            My GitHub
+          </a>
+
+          <a
+            class="social-card"
+            href="https://linkedin.com/in/sbzzz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            My Linkedin
+          </a>
+        </div>
+      </section>
+
+      <!-- FLOATING SPACEMAN -->
+      <img
+        src="https://i.imgur.com/wr45pe4.png"
+        alt="spaceman"
+        id="spaceman"
+        class="spaceman"
+      />
+
+      <!-- CONTACT (centered + marquee 2 to right + button centered under) -->
+      <section id="contact" class="contact-section">
+        <div class="contact-row">
+          <h2 class="contact-title">Hit Me Up!</h2>
+
+          <div class="marquee-badge marquee-2">
+            <img
+              src="https://i.imgur.com/txiSYzz.png"
+              alt="space marquee green"
+              class="space-marquee-img"
+            />
+            <p class="marquee-text">"She's cool I swear!-Mom"</p>
+          </div>
+        </div>
+
+        <button class="email-button" id="emailBtn" type="button">Click Me</button>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
