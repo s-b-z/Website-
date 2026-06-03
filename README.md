@@ -8,8 +8,8 @@
 ## 👋 About Me
 Hi, I'm SBZ.
 
-This is my personal portfolio website showcasing my work, skills, and projects.  
-The site features an interactive design, including a flying astronaut animation and an embedded resume.
+This is my personal portfolio website designed and developed to highlight my work, technical skills, and experience. It features a custom UI with animated elements, an embedded resume for quick access, and a curated selection of projects.
+The goal of this site is not just to display projects, but to provide a clear, engaging way for others to understand how I approach building web experiences.
 
 ---
 
